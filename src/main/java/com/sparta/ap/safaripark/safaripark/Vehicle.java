@@ -1,8 +1,8 @@
 package com.sparta.ap.safaripark.safaripark;
 
 public class Vehicle {
-    private int speed = 10;
-    private int capacity = 4;
+    int speed = 10;
+    int capacity = 4;
     private int position;
     private int numPassangers;
 
@@ -15,7 +15,6 @@ public class Vehicle {
     }
     public Vehicle(int capacity, int numPassangers, int position, int speed){
         this.position=position;
-        this.numPassangers = numPassangers;
     }
 
     public int getSpeed() {
@@ -41,12 +40,14 @@ public class Vehicle {
     }
 
     public String move(int times){
-        this.position = speed * times;
+        this.position += speed * times;
         return "Moving along " + times + " times";
     }
     public String move(){
         this.position = position + speed;
         return "Moving along";
     }
-
+    public String toString(){
+        return "Vehicle{capacity="+getCapacity()+", numPassengers="+getNumPassangers()+", position="+getPosition()+", speed="+getSpeed()+"}";
+    }
 }

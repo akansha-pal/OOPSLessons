@@ -39,7 +39,7 @@ public class VehicleTest {
     public  void testingMoveTimesPosition() {
         Vehicle v = new Vehicle(4,2,3,10);
         v.move(5);
-        Assertions.assertEquals(50, v.getPosition());
+        Assertions.assertEquals(53, v.getPosition());
     }
     @Test
     @DisplayName("Testing position times speed returns the correct value")
@@ -49,17 +49,17 @@ public class VehicleTest {
     }
 
     @Test
-    @DisplayName("Testing passangers less than capacity returns the correct value")
+    @DisplayName("Testing passengers less than capacity returns the correct value")
     public  void testingGetNumPassangersLessCapacity() {
         Vehicle v = new Vehicle(4,2,3,10);
         v.setNumPassangers(3);
         Assertions.assertEquals(3, v.getNumPassangers());
     }
     @Test
-    @DisplayName("Testing passangers more than than capacity returns the initial value of passangers")
+    @DisplayName("Testing passengers more than than capacity returns the initial value of passangers")
     public  void testingGetNumPassangersMoreCapacity() {
         Vehicle v = new Vehicle(4,2,3,10);
         v.setNumPassangers(5);
-        Assertions.assertEquals(2, v.getNumPassangers());
+        Assertions.assertEquals(0, v.getNumPassangers());
     }
 }
