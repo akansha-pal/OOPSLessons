@@ -1,7 +1,5 @@
 package com.sparta.ap.safaripark;
 
-import com.sparta.ap.safaripark.safaripark.Hunter;
-
 public class Person {
     @Override
     public String toString() {
@@ -12,8 +10,8 @@ public class Person {
                 '}';
     }
 
-    private String firstName = "";
-    private String lastName = "";
+     public String firstName = "";
+     public String lastName = "";
     private int age = 35;
 
     public Person() {

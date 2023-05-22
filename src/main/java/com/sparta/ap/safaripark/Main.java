@@ -1,6 +1,6 @@
 package com.sparta.ap.safaripark;
 
-import com.sparta.ap.safaripark.safaripark.Hunter;
+import com.sparta.ap.safaripark.safaripark.polymorphism.Hunter;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,21 +21,21 @@ public class Main {
 //    }
 
         // Inheritance
-        Hunter Diana = new Hunter("Diana", "Artemis", 21, "Leica");
+        //Hunter Diana = new Hunter("Diana", "Artemis", 21, "Leica");
         {
-            System.out.println(Diana.getAge());
-            System.out.println(Diana.shoot());
-            var dianaCanAcccessProtected = Diana.getFirstName();
+            //System.out.println(Diana.getAge());
+            //System.out.println(Diana.shoot());
+            //var dianaCanAcccessProtected = Diana.getFirstName();
 
-            Hunter hawkeye = new Hunter("hawkeye", "Marvel", 33, "Canon");
-            Hunter hawkeye2 = new Hunter("hawkeye", "Marvel", 33, "Canon");
+            //Hunter hawkeye = new Hunter("hawkeye", "Marvel", 33, "Canon");
+            //Hunter hawkeye2 = new Hunter("hawkeye", "Marvel", 33, "Canon");
 //            var same = hawkeye.equals(hawkeye2);
 //            var h1hashcode = hawkeye.hashCode();
 //            var h2hashcode = hawkeye2.hashCode();
 //            var type = hawkeye.getClass();
 //            var toStringResult = hawkeye.toString();
            // System.out.println(toStringResult);
-            System.out.println(hawkeye);
+            //System.out.println(hawkeye);
 
             Person cathy = new Person("Cathy", "french", 31);
             System.out.println(cathy);
