@@ -5,6 +5,7 @@ public class Circle extends Shape {
 
     public Circle(int radius) {
         this.radius = radius;
+
     }
     @Override
     public double calculateArea() {
@@ -13,5 +14,14 @@ public class Circle extends Shape {
     @Override
     public String toString(){
      return "Circle : 3.14 " + "radius" + radius +"radius" + radius;
+    }
+
+    @Override
+    public int hashCode(){
+        return 2;
+    }
+    @Override
+    public boolean equals(Object obj){
+        return false;
     }
 }

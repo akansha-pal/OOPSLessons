@@ -8,7 +8,9 @@ public class ShapeApp {
         var rArea = rectangle.calculateArea();
         System.out.println(cArea);
         System.out.println(rArea);
-
-
+        System.out.println(circle.hashCode());
+        System.out.println(circle.equals(circle));
+        System.out.println(rectangle.hashCode());
+        System.out.println(rectangle.equals(circle));
     }
 }
