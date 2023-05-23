@@ -1,17 +1,37 @@
 package com.sparta.ap.safaripark.safaripark.polymorphism;
 
-abstract class Weapon implements IShootable{
-     String brand;
-    public Weapon(String str){
-        this.brand=str;
+abstract class Weapon implements IShootable {
+
+    public enum Brand {
+        ACME, SUPERSOAKER, NIAGRA, MINOLTA;
     }
+    Brand b;
+    public Weapon(String str) {
+        switch (str) {
+            case "Acme" -> {
+                this.b = Brand.ACME;
+            }
+            case "Supersoaker" -> {
+                this.b = Brand.SUPERSOAKER;
+            }
+            case "Niagara" -> {
+                this.b = Brand.NIAGRA;
+            }
+            case "Minolta" -> {
+                this.b = Brand.MINOLTA;
+            }
+        }
+    }
+
     @Override
-    public String toString(){
+    public String toString() {
         return "";
     }
+
+
 }
 
-class LaserGun extends Weapon{
+class LaserGun extends Weapon {
 
     public LaserGun(String str) {
         super(str);
@@ -19,11 +39,11 @@ class LaserGun extends Weapon{
 
     @Override
     public String shoot() {
-        return "Zing!! Shooting a LaserGun - " + brand;
+        return "Zing!! Shooting a LaserGun - " + b;
     }
 }
 
-class WaterPistol extends Weapon{
+class WaterPistol extends Weapon {
 
     public WaterPistol(String str) {
         super(str);
@@ -31,7 +51,7 @@ class WaterPistol extends Weapon{
 
     @Override
     public String shoot() {
-        return "Splash!! Shooting a WaterPistol - " + brand;
+        return "Splash!! Shooting a WaterPistol - " + b;
     }
 }
 
