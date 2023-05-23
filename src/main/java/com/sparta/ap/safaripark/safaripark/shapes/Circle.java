@@ -1,6 +1,8 @@
 package com.sparta.ap.safaripark.safaripark.shapes;
 
-public class Circle extends Shape {
+import java.util.List;
+
+public class Circle extends Shape implements Comparable<Shape>{
     int radius;
 
     public Circle(int radius) {
@@ -13,7 +15,7 @@ public class Circle extends Shape {
     }
     @Override
     public String toString(){
-     return "Circle : 3.14 " + "radius" + radius +"radius" + radius;
+     return "Circle : 3.14 " + "radius " + radius +" radius " + radius;
     }
 
     @Override
@@ -23,5 +25,15 @@ public class Circle extends Shape {
     @Override
     public boolean equals(Object obj){
         return false;
+    }
+
+    @Override
+    public int compareTo(Shape sh) {
+        if (this.radius==sh.hashCode()){
+            return 0;
+        }
+        else {
+            return 1;
+        }
     }
 }
